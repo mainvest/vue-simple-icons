@@ -1,5 +1,7 @@
 # vue-simple-icons
 
+[Simple Icons](https://simpleicons.org/) as Vue components.
+
 ## Install
 
 ```bash
@@ -32,7 +34,7 @@ You can also set a `px` size directly by passing an integer
 ```
 
 ## Note
-Because (identifiers can’t start with numeric literals)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Identifier_after_number], some names have numbers converted to English words. For example, `500px` is available as `FiveHundredPxIcon`.
+Because [identifiers can’t start with numeric literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Identifier_after_number), names beginning with have numbers converted to English words. For example, `500px` is available as `FiveHundredPxIcon`.
 
 ## Credit
 
