@@ -1,32 +1,30 @@
 <template>
   <div id="app">
+    <a href="https://www.mainvest.com/?utm_source=opensource&utm_medium=referral&utm_campaign=vue-simple-icons" target="_blank" class="credit">
+      <span>Invest in Main Street</span> 🏘📊🇺🇸
+    </a>
     <github
       v-tippy="{ title: 'Star me on GitHub', trigger: 'mouseenter ' }"
       fill="white"
-      slug="egoist/vue-feather-icons"
+      slug="mainvest/vue-simple-icons"
+      id="github"
     >
     </github>
     <header class="header">
       <div class="container">
-        <h1 class="hero-heading">vue-feather-icons</h1>
+        <h1 class="hero-heading">vue-simple-icons</h1>
         <h2 class="desc">
-          Simply beautiful open source icons as Vue functional components.
+          <a href="https://simpleicons.org/" target="_blank">Simple Icons</a> as Vue components.
         </h2>
       </div>
     </header>
     <div class="container">
-      <div class="support">
-        🤩 If this project has helped you, please consider
-        <a href="https://github.com/sponsors/egoist" target="_blank"
-          >sponsoring me on GitHub</a
-        >!
-      </div>
       <div class="search-bar">
         <input
           type="text"
           class="search-input"
           v-model="keyword"
-          :placeholder="`Search in ${icons.length} icons...`"
+          :placeholder="`Search ${icons.length} icons...`"
         />
       </div>
       <div class="icons">
@@ -42,33 +40,7 @@
           <span>{{ icon }}</span>
         </div>
       </div>
-      <div class="sizing">
-        <h2>Sizing</h2>
-        <div class="sizes">
-          <div
-            class="size"
-            v-for="size in exampleSizes"
-            v-tippy="{ interactive: true }"
-            @click="handleClickSize(size)"
-            :key="size"
-            :title="sizeExample(size)"
-          >
-            <div class="size-label">
-              {{ size }}{{ size === "1x" ? " (default)" : "" }}
-            </div>
-            <div class="size-icon">
-              <archive-icon :size="size"></archive-icon>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <footer class="footer">
-      <div class="container">
-        &copy; {{ year }} Brought by
-        <a href="https://github.com/egoist">EGOIST</a>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -114,8 +86,8 @@ export default {
     sizeExample(size) {
       return example
         .replace("1.5x", size)
-        .replace(/ICON/g, "ArchiveIcon")
-        .replace(/kebab-icon/g, "archive-icon");
+        .replace(/ICON/g, "FacaebookIcon")
+        .replace(/kebab-icon/g, "facebook-icon");
     },
   },
   components: {
@@ -129,9 +101,43 @@ export default {
 <style src="prismjs/themes/prism.css"></style>
 
 <style>
+@import url('https://rsms.me/inter/inter.css');
+
+#github {
+  position:absolute !important;
+  top:40px !important;
+  right: 15px !important;
+}
+
+a.credit {
+  padding: 4px 8px;
+  background: #004080;
+  text-align: center;
+  width:100%;
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:10000;
+}
+
+a.credit:hover {
+  text-decoration: none;
+}
+
+a.credit span {
+  font-size:80%;
+  line-height:0.9;
+  color: rgba(255,255,255,0.9);
+  display:inline-block;
+  transform: translateY(-1px);
+  border-bottom: 1px solid rgba(255,255,255,0.75);
+}
+
 body {
   margin: 0;
-  font: 14px/1.4 "Nunito", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.4 "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 * {
@@ -148,7 +154,7 @@ a:hover {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0 10px;
 }
@@ -183,23 +189,25 @@ a:hover {
 
 <style scoped>
 .header {
-  background: linear-gradient(90deg, #5733ea, #4894ff 70%, #a5bcff);
-  padding: 40px 0;
+  background: #263238;
+  padding: 70px 0 40px;
 }
 
 .desc {
   color: white;
-  font-weight: 500;
+  font-weight: 400;
+}
+
+.desc a {
+  color:#ffffff !important;
+  text-decoration: underline;
 }
 
 .hero-heading {
-  color: #7dffc3;
+  color: #ffffff;
   margin: 0;
   font-size: 2rem;
-  font-weight: 600;
-  background: -webkit-linear-gradient(135deg, #fff9b0, #7dffc3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 500;
 }
 
 .icons {
@@ -242,62 +250,6 @@ a:hover {
 
 .search-input:focus {
   border-color: #ccc;
-}
-
-.footer {
-  margin: 40px 0;
-  font-size: 1rem;
-}
-
-.sizing {
-  text-align: center;
-}
-
-.sizes {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-}
-
-.size {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  border-radius: 3px;
-}
-
-.size-label {
-  font-size: 1.5em;
-  font-weight: lighter;
-  color: rgba(0, 0, 0, 0.36);
-  margin-bottom: 0.5em;
-}
-
-.size-icon {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.size:hover {
-  background: #f1f5ff;
-}
-
-.support {
-  background-color: pink;
-  border-radius: 4px;
-  padding: 10px 15px;
-  margin-top: 20px;
-  font-size: 1.25rem;
-}
-
-.support a {
-  text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {

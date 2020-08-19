@@ -1,15 +1,15 @@
 {
-  "name": "vue-feather-icons",
-  "version": "4.22.0",
-  "description": "Simply beautiful open source icons as Vue functional components.",
+  "name": "vue-simple-icons",
+  "version": "1.0.0",
+  "description": "Simple Icons as Vue components.",
   "repository": {
-    "url": "egoist/vue-feather-icons",
+    "url": "mainvest/vue-simple-icons",
     "type": "git"
   },
-  "main": "dist/vue-feather-icons.cjs.js",
-  "cdn": "dist/vue-feather-icons.min.js",
-  "unpkg": "dist/vue-feather-icons.min.js",
-  "module": "dist/vue-feather-icons.es.js",
+  "main": "dist/vue-simple-icons.cjs.js",
+  "cdn": "dist/vue-simple-icons.min.js",
+  "unpkg": "dist/vue-simple-icons.min.js",
+  "module": "dist/vue-simple-icons.es.js",
   "files": [
     "dist",
     "icons"
@@ -19,13 +19,12 @@
     "test": "echo 'no tests!'",
     "prepublishOnly": "npm run build",
     "build": "npm run build:icons && npm run build:dist",
-    "build:dist": "bili --format umd,es,cjs,umd-min --js buble --name vue-feather-icons",
+    "build:dist": "bili --format umd,es,cjs,umd-min --js buble --name vue-simple-icons",
     "build:icons": "node build && babel src/components -d icons",
     "example": "poi --serve --config example/poi.config.js",
     "build:example": "poi --prod --config example/poi.config.js",
     "prebuild:example": "npm run build:icons"
   },
-  "author": "egoist <0x142857@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "babel-helper-vue-jsx-merge-props": "^2.0.2"
@@ -35,18 +34,19 @@
     "@babel/core": "^7.2.2",
     "bili": "^3.4.2",
     "eslint-config-rem": "^4.0.0",
-    "feather-icons": "^4.28.0",
     "fs-extra": "^8.0.1",
     "lodash.kebabcase": "^4.1.1",
     "marked": "^0.6.0",
     "pascal-case": "^2.0.1",
     "poi": "^12.4.4",
     "prismjs": "^1.6.0",
+    "simple-icons": "^3.5.0",
     "typeface-nunito": "^0.0.72",
     "v-tippy": "^1.0.0",
     "vue": "^2.5.22",
     "vue-github-badge": "^1.0.1",
-    "vue-template-compiler": "^2.5.22"
+    "vue-template-compiler": "^2.5.22",
+    "written-number": "^0.9.1"
   },
   "babel": {
     "presets": [
