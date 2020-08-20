@@ -1,6 +1,7 @@
 {
   "name": "vue-simple-icons",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "homepage": "https://vue-simple-icons.mainvest.com",
   "description": "Simple Icons as Vue components.",
   "repository": {
     "url": "mainvest/vue-simple-icons",
