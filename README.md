@@ -24,17 +24,17 @@ You can set a custom size using the `size` attribute.
 For multiple based sizing, pass the desired multiple followed by an `x`.
 
 ```html
-<activity-icon size="1.5x" class="custom-class"></activity-icon>
+<facebook-icon size="1.5x" class="custom-class"></facebook-icon>
 ```
 
 You can also set a `px` size directly by passing an integer
 
 ```html
-<activity-icon size="25" class="custom-class"></activity-icon>
+<facebook-icon size="25" class="custom-class"></facebook-icon>
 ```
 
 ## Note
-Because [identifiers can’t start with numeric literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Identifier_after_number), names beginning with have numbers converted to English words. For example, `500px` is available as `FiveHundredPxIcon`.
+Because [identifiers can’t start with numeric literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Identifier_after_number), names beginning with numbers have them converted to English words. For example, `500px` is available as `FiveHundredPxIcon`.
 
 ## Credit
 
