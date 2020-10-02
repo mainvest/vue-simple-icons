@@ -154,7 +154,7 @@ a:hover {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 0 10px;
 }
