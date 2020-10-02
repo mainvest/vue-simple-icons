@@ -34,7 +34,8 @@ You can also set a `px` size directly by passing an integer
 ```
 
 ## Note
-Because [identifiers can’t start with numeric literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Identifier_after_number), names beginning with numbers have them converted to English words. For example, the logo for 500px is available as `FiveHundredPxIcon`.
+* Because [identifiers can’t start with numeric literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Identifier_after_number), names beginning with numbers have them converted to English words. For example, the logo for 500px is available as `FiveHundredPxIcon`.
+* Versioning follows the [Simple Icons](https://github.com/simple-icons/simple-icons) package.
 
 ## Credit
 
