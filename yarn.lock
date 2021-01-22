@@ -6547,9 +6547,10 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-simple-icons@^3.10.0:
-  version "3.10.0"
-  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-3.10.0.tgz#7086a82ddcaddba06c8ab0fc2e873289e3f7bc87"
+simple-icons@^4.7.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/simple-icons/-/simple-icons-4.7.0.tgz#3d89a92e0bd1e63d188dc9676797868cf2db13c0"
+  integrity sha512-DrdSFX/a0scepibk0YUZPGnjk+k6Zwwy6b44DWTKn94Ndf8ntGMwczRSQIK3NgbjV5PaK18AvofzwlGypouEYw==
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
