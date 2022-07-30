@@ -40,3 +40,12 @@ You can also set a `px` size directly by passing an integer
 ## Credit
 
 Based on [**vue-feather-icons**](https://github.com/egoist/vue-feather-icons) by [egoist](https://github.com/egoist)
+
+## Upgrade Instructions
+
+* `npm i simple-icons`
+* `npm version [latest version of simple-icons]`
+* `npm publish`
+* `git add .`
+* `git commit -m "Release [latest version of simple-icons]"`
+* `git push`
