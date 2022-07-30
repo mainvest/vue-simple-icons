@@ -33,10 +33,10 @@ export default {
 }
 `.trim()
 
-function handleNumbers(title){
-  const beginningNumbers = title.replace( /[^\d].*/, '' )
-  if(beginningNumbers.length){
-    const numberInEnglish = writtenNumber(beginningNumbers, {noAnd: true})
+function handleNumbers(title) {
+  const beginningNumbers = title.replace(/[^\d].*/, '')
+  if (beginningNumbers.length) {
+    const numberInEnglish = writtenNumber(beginningNumbers, { noAnd: true })
     const numberSlug = numberInEnglish.toString().split(' ').join('-') + '-'
     title = title.replace(beginningNumbers, numberSlug)
   }
@@ -45,7 +45,10 @@ function handleNumbers(title){
   return title
 }
 
-const icons = Object.entries(simple).map(([key, value]) => ({
+// Hitting some issues with a couple icons, blacklisting for now...
+const ICON_BLACKLIST = ["handshake_protocol", "hive", "spring"];
+
+const icons = Object.entries(simple).filter(([key]) => { return !ICON_BLACKLIST.includes(key) }).map(([key, value]) => ({
   key,
   pascalCasedComponentName: pascalCase(`${handleNumbers(value.title)}-icon`)
 }))
